@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Choice under Uncertainty: Expected Utility Theory</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-02-uncertainty-expected-value-and.html"><img src="shared/images/batch-left.png"></a> <a href="s07-02-uncertainty-expected-value-and.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-04-biases-affecting-choice-under-.html">Next Section</a> <a href="s07-04-biases-affecting-choice-under-.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="baranoff-ch03_s03" condition="start-of-chunk" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">3.3</span> Choice under Uncertainty: Expected Utility Theory</h2>
+    <div class="learning_objectives editable block" id="baranoff-ch03_s03_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ul class="itemizedlist" id="baranoff-ch03_s03_l01">
+            <li> In this section the student learns that an individual’s objective is to maximize expected utility when making decisions under uncertainty.</li>
+            <li> We also learn that people are risk averse, risk neutral, or risk seeking (loving).</li>
+        </ul>
+    </div>
+    <p class="para editable block" id="baranoff-ch03_s03_p01">We saw earlier that in a certain world, people like to maximize utility. In a world of uncertainty, it seems intuitive that individuals would maximize <span class="margin_term"><a class="glossterm">expected utility</a><span class="glossdef">A construct to explain the level of satisfaction a person gets when faced with uncertain choices.</span></span>. This refers to a construct used to explain the level of satisfaction a person gets when faced with uncertain choices. The intuition is straightforward, proving it axiomatically was a very challenging task. John von Neumann and Oskar Morgenstern (1944) advocated an approach that leads us to a formal mathematical representation of maximization of expected utility.</p>
+    <p class="para editable block" id="baranoff-ch03_s03_p02">We have also seen that a utility function representation exists if the four assumptions discussed above hold. Messrs. von Neumann and Morgenstern added two more assumptions and came up with an expected utility function that exists if these axioms hold. While the discussions about these assumptions<span class="footnote" id="fwk-baranoff-fn03_008">These are called the <em class="emphasis">continuity</em> and <em class="emphasis">independence</em> assumptions.</span> is beyond the scope of the text, it suffices to say that the expected utility function has the form </p>
+    <span class="informalequation block"><math xml:id="baranoff_ch03_s03_m001" display="block">
+	 <mrow>
+	  <mtext>E</mtext><mrow><mo>(</mo>
+	   <mtext>U</mtext>
+	  <mo>)</mo></mrow><mo>=</mo>
+	   <mstyle displaystyle="true"><mrow>
+	    <mstyle displaystyle="true">
+	     <munderover>
+	      <mo mathsize="140%">∑</mo>
+	      <mrow>
+	       <mi>i</mi><mo>=</mo><mn>1</mn>
+	      </mrow>
+	      <mtext>n</mtext>
+	     </munderover>
+	     <mrow>
+	      <msub>
+	       <mi>π</mi>
+	       <mi>i</mi>
+	      </msub>
+	      <msub>
+	       <mi>u</mi>
+	       <mi>i</mi>
+	      </msub>,
+	     </mrow>
+	    </mstyle>
+	   </mrow>
+	   </mstyle>
+	 </mrow>
+	</math>
+</span>
+    <p class="para editable block" id="baranoff-ch03_s03_p03">where <em class="emphasis">u</em> is a function that attaches numbers measuring the level of satisfaction <em class="emphasis">u<sub class="subscript">i</sub></em> associated with each outcome i. <em class="emphasis">u</em> is called the Bernoulli function while E(U) is the von Neumann-Morgenstern expected utility function.</p>
+    <p class="para editable block" id="baranoff-ch03_s03_p04">Again, note that expected utility function is not unique, but several functions can model the preferences of the same individual over a given set of uncertain choices or games. What matters is that such a function (which reflects an individual’s preferences over uncertain games) exists. The expected utility theory then says if the axioms provided by von Neumann-Morgenstern are satisfied, then the individuals behave as if they were trying to maximize the expected utility.</p>
+    <p class="para editable block" id="baranoff-ch03_s03_p05">The most important insight of the theory is that the expected value of the dollar outcomes may provide a ranking of choices different from those given by expected utility. The <span class="margin_term"><a class="glossterm">expected utility theory</a><span class="glossdef">Theory that says persons will choose an option that maximizes their expected utility rather than their expected wealth.</span></span> then says persons shall choose an option (a game of chance or lottery) that maximizes their expected utility rather than the expected wealth. That expected utility ranking differs from expected wealth ranking is best explained using the example below.</p>
+    <p class="para block" id="baranoff-ch03_s03_p06">Let us think about an individual whose utility function is given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m002" display="inline">
+	 <mrow>
+	  <mi>u</mi><mrow><mo>(</mo>
+	   <mi>W</mi>
+	  <mo>)</mo></mrow><mo>=</mo><msqrt>
+	   <mi>W</mi>
+	  </msqrt>
+	 </mrow>
+	</math>
+</span> and has an initial endowment of $10. This person faces the following three lotteries, based on a coin toss:</p>
+    <div class="table block" id="baranoff-ch03_s03_t01" frame="all">
+        <p class="title"><span class="title-prefix">Table 3.1</span> Utility Function with Initial Endowment of $10</p>
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Outcome (Probability)</th>
+                    <th align="right">Payoff Lottery 1</th>
+                    <th align="right">Payoff Lottery 2</th>
+                    <th align="right">Payoff Lottery 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>H (0.5)</td>
+                    <td align="right">10</td>
+                    <td align="right">20</td>
+                    <td align="right">30</td>
+                </tr>
+                <tr>
+                    <td>T (0.5)</td>
+                    <td align="right">−2</td>
+                    <td align="right">−5</td>
+                    <td align="right">−10</td>
+                </tr>
+                <tr>
+                    <td>E(G)</td>
+                    <td align="right">4</td>
+                    <td align="right">7.5</td>
+                    <td align="right">10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="para editable block" id="baranoff-ch03_s03_p07">We can calculate the expected payoff of each lottery by taking the product of probability and the payoff associated with each outcome and summing this product over all outcomes. The ranking of the lotteries based on expected dollar winnings is lottery 3, 2, and 1—in that order. But let us consider the ranking of the same lotteries by this person who ranks them in order based on expected utility.</p>
+    <p class="para block" id="baranoff-ch03_s03_p08">We compute expected utility by taking the product of probability and the associated utility corresponding to each outcome for all lotteries. When the payoff is $10, the final wealth equals initial endowment ($10) plus winnings = ($20). The utility of this final wealth is given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m003" display="inline">
+	 <mrow>
+	  <msqrt>
+	   <mrow>
+	    <mn>20</mn>
+	   </mrow>
+	  </msqrt>
+	  <mo>=</mo><mtext>4</mtext><mo>.</mo><mtext>472</mtext><mtext>.</mtext>
+	 </mrow>
+	</math>
+</span> The completed utility table is shown below.</p>
+    <div class="table block" id="baranoff-ch03_s03_t02" frame="all">
+        <p class="title"><span class="title-prefix">Table 3.2</span> Lottery Rankings by Expected Utility</p>
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Outcome (Probability)</th>
+                    <th align="right">Utility Lottery 1</th>
+                    <th align="right">Utility Lottery 2</th>
+                    <th align="right">Utility Lottery 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>H (0.5)</td>
+                    <td align="right">4.472</td>
+                    <td align="right">5.477</td>
+                    <td align="right">6.324</td>
+                </tr>
+                <tr>
+                    <td>T (0.5)</td>
+                    <td align="right">2.828</td>
+                    <td align="right">2.236</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td>E(U) =</td>
+                    <td align="right">3.650</td>
+                    <td align="right">3.856</td>
+                    <td align="right">3.162</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="para editable block" id="baranoff-ch03_s03_p09">The expected utility ranks the lotteries in the order 2–1–3. So the expected utility maximization principle leads to choices that differ from the expected wealth choices.</p>
+    <p class="para editable block" id="baranoff-ch03_s03_p10">The example shows that the ranking of games of chance differs when one utilizes the expected utility (E[U]) theory than when the expected gain E(G) principle applies This leads us to the insight that if two lotteries provide the same E(G), the expected gain principle will rank both lotteries equally, while the E(U) theory may lead to unique rankings of the two lotteries. What happens when the E(U) theory leads to a same ranking? The theory says the person is indifferent between the two lotteries.</p>
+    <div class="section" id="baranoff-ch03_s03_s01">
+        <h2 class="title editable block">Risk Types and Their Utility Function Representations</h2>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p01">What characteristic of the games of chance can lead to same E(G) but different E(U)? The characteristic is the “risk” associated with each game.<span class="footnote" id="fwk-baranoff-fn03_009">At this juncture, we only care about that notion of risk, which captures the inherent variability in the outcomes (uncertainty) associated with each lottery.</span> Then the E(U) theory predicts that the individuals’ risk “attitude” for each lottery may lead to different rankings between lotteries. Moreover, the theory is “robust” in the sense that it also allows for attitudes toward risk to vary from one individual to the next. As we shall now see, the E(U) theory does enable us to capture different risk attitudes of individuals. Technically, the difference in risk attitudes across individuals is called “heterogeneity of risk preferences” among economic agents.</p>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p02">From the E(U) theory perspective, we can categorize all economic agents into one of the three categories as noted in <a class="xref" href="baranoff-ch01#baranoff-ch01">Chapter 1 "The Nature of Risk: Losses and Opportunities"</a>:</p>
+        <ul class="itemizedlist editable block" id="baranoff-ch03_s03_s01_l01">
+            <li>Risk averse</li>
+            <li>Risk neutral</li>
+            <li>Risk seeking (or loving)</li>
+        </ul>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p03">We will explore how E(U) captures these attitudes and the meaning of each risk attitude next.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p04">Consider the E(U) function given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m004" display="inline">
+		 <mrow>
+		  <mtext>E</mtext><mrow><mo>(</mo>
+		   <mtext>U</mtext>
+		  <mo>)</mo></mrow><mo>=</mo><munderover>
+		   <mstyle displaystyle="true"><mrow>
+		    <mstyle displaystyle="true">
+		     <munderover>
+		      <mo mathsize="140%">∑</mo>
+		      <mrow>
+		       <mi>i</mi><mo>=</mo><mn>1</mn>
+		      </mrow>
+		      <mtext>n</mtext>
+		     </munderover>
+		     <mrow>
+		      <msub>
+		       <mi>π</mi>
+		       <mi>i</mi>
+		      </msub>
+		     </mrow>
+		    </mstyle>
+		   </mrow></mstyle>
+		   <mrow></mrow>
+		   <mrow></mrow>
+		  </munderover>
+		  <mi>u</mi><mo stretchy="false">(</mo><msub>
+		   <mtext>W</mtext>
+		   <mi>i</mi>
+		  </msub>
+		  <mo stretchy="false">)</mo><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Let the preferences be such that the addition to utility one gets out of an additional dollar at lower levels of wealth is always greater than the additional utility of an extra dollar at higher levels of wealth. So, let us say that when a person has zero wealth (no money), then the person has zero utility. Now if the person receives a dollar, his utility jumps to 1 util. If this person is now given an additional dollar, then as per the monotonicity (more-is-better) assumption, his utility will go up. Let us say that it goes up to 1.414 utils so that the increase in utility is only 0.414 utils, while earlier it was a whole unit (1 util). At 2 dollars of wealth, if the individual receives another dollar, then again his families’ utility rises to a new level, but only to 1.732 utils, an increase of 0.318 units (1.732 − 1.414). This is increasing utility at a decreasing rate for each additional unit of wealth. <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> shows a graph of the utility.</p>
+        <div class="figure large editable block" id="baranoff-ch03_s03_s01_f01">
+            <p class="title"><span class="title-prefix">Figure 3.2</span> A Utility Function for a Risk-Averse Individual</p>
+            <img src="section_07/51421eafdf1e834b7e496186113d9cfa.jpg">
+        </div>
+        <p class="para block" id="baranoff-ch03_s03_s01_p05">The first thing we notice from <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> is its <span class="margin_term"><a class="glossterm">concavity</a><span class="glossdef">Property of a curve in which a chord connecting any two points on the curve will lie strictly below the curve.</span></span>, which means if one draws a chord connecting any two points on the curve, the chord will lie strictly below the curve. Moreover, the utility is always increasing although at a decreasing rate. This feature of this particular utility function is called <span class="margin_term"><a class="glossterm">diminishing marginal utility</a><span class="glossdef">Feature of a utility function in which utility is always increasing although at a decreasing rate.</span></span>. Marginal utility at any given wealth level is nothing but the slope of the utility function at that wealth level.<span class="footnote" id="fwk-baranoff-fn03_010">Mathematically, the property that the utility is increasing at a decreasing rate can be written as a combination of restrictions on the first and second derivatives (rate of change of slope) of the utility function, <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m005" display="inline">
+		 <mrow>
+		  <mi>u</mi><mo>′</mo><mo stretchy="false">(</mo><mtext>W</mtext><mo stretchy="false">)</mo><mo>&gt;</mo><mn>0</mn><mo>,</mo><mi>u</mi><mo>″</mo><mo stretchy="false">(</mo><mtext>W</mtext><mo stretchy="false">)</mo><mo>&lt;</mo><mn>0</mn><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Some functions that satisfy this property are <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m006" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo stretchy="false">(</mo>
+		   <mtext>W</mtext>
+		  <mo stretchy="false">)</mo></mrow><mo>=</mo><msqrt>
+		   <mtext>W</mtext>
+		  </msqrt>
+		  <mo>,</mo><mtext>LN</mtext><mrow><mo stretchy="false">(</mo>
+		   <mtext>W</mtext>
+		  <mo stretchy="false">)</mo></mrow><mo>,</mo><mo>−</mo><msup>
+		   <mi>e</mi>
+		   <mrow>
+		    <mo>−</mo><mtext>aW</mtext>
+		   </mrow>
+		  </msup><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span></span> <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m007" display="inline">
+		 <mrow>
+		  <mi>u</mi><mo>′</mo><mo stretchy="false">(</mo><mtext>W</mtext><mo stretchy="false">)</mo><mo>&gt;</mo><mn>0</mn><mo>,</mo><mi>u</mi><mo>″</mo><mo stretchy="false">(</mo><mtext>W</mtext><mo stretchy="false">)</mo><mo>&lt;</mo><mn>0</mn><mi>u</mi><mo stretchy="false">(</mo><mtext>W</mtext><mo stretchy="false">)</mo><mo>=</mo>
+<msqrt><mrow>  <mtext>W</mtext>  </mrow></msqrt><mtext>,</mtext><mtext>LN</mtext><mrow><mo stretchy="false">(</mo>
+		   <mtext>W</mtext>
+		  <mo stretchy="false">)</mo><mtext>,</mtext>
+<mo>−</mo><msup>
+<mi>e</mi>
+<mrow>
+<mo>−</mo><mn>2</mn><mi>W</mi>
+</mrow>
+</msup>
+	   </mrow><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> The functional form depicted in <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> is LN(W).</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p06">The question we ask ourselves now is whether such an individual, whose utility function has the shape in <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a>, will be willing to pay the <span class="margin_term"><a class="glossterm">actuarially fair price (AFP)</a><span class="glossdef">The expected loss in wealth to the individual.</span></span>, which equals expected winnings, to play a game of chance? Let the game that offers him payoffs be offered to him. In Game 1, tables have playoff games by Game 1 in <a class="xref" href="#baranoff-ch03_s03_t01">Table 3.1 "Utility Function with Initial Endowment of $10"</a> based on the toss of a coin. The AFP for the game is $4. Suppose that a person named Terry bears this cost upfront and wins; then his final wealth is $10 − $4 + $10 = $16 (original wealth minus the cost of the game, plus the winning of $10), or else it equals $10 − $4 − $2 = $4 (original wealth minus the cost of the game, minus the loss of $2) in case he loses. Let the utility function of this individual be given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m008" display="inline">
+		 <mrow>
+		  <msqrt>
+		   <mtext>W</mtext>
+		  </msqrt><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Then expected utility when the game costs AFP equals <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m009" display="inline">
+		 <mrow>
+		  <mn>0.5</mn><msqrt>
+		   <mrow>
+		    <mn>16</mn>
+		   </mrow>
+		  </msqrt>
+		  <mo>+</mo><mn>0.5</mn><msqrt>
+		   <mn>4</mn>
+		  </msqrt>
+		  <mo>=</mo><mn>3</mn>
+		 </mrow>
+		</math>
+</span> utils. On the other hand, suppose Terry doesn’t play the game; his utility remains at <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m010" display="inline">
+		 <mrow>
+		  <msqrt>
+		   <mrow>
+		    <mn>10</mn>
+		   </mrow>
+		  </msqrt>
+		  <mo>=</mo><mn>3.162</mn><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Since the utility is higher when Terry doesn’t play the game, we conclude that any individual whose preferences are depicted by <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> will forgo a game of chance if its cost equals AFP. This is an important result for a concave utility function as shown in <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a>.</p>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p07">Such a person will need incentives to be willing to play the game. It could come as a price reduction for playing the lottery, or as a premium that compensates the individual for risk. If Terry already faces a risk, he will pay an amount greater than the actuarially fair value to reduce or eliminate the risk. Thus, it works both ways—consumers demand a premium above AFP to take on risk. Just so, insurance companies charge individuals premiums for risk transfer via insurances.</p>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p08">An individual—let’s name him Johann—has preferences that are characterized by those shown in <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> (i.e., by a concave or diminishing marginal utility function). Johann is a risk-averse person. We have seen that a risk-averse person refuses to play an actuarially fair game. Such risk aversions also provide a natural incentive for Johann to demand (or, equivalently, pay) a risk premium above AFP to take on (or, equivalently, get rid of) risk. Perhaps you will recall from <a class="xref" href="baranoff-ch01#baranoff-ch01">Chapter 1 "The Nature of Risk: Losses and Opportunities"</a> that introduced a more mathematical measure to the description of risk aversion. In an experimental study, Holt and Laury (2002) find that a majority of their subjects under study made “safe choices,” that is, displayed risk aversion. Since real-life situations can be riskier than laboratory settings, we can safely assume that a majority of people are risk averse most of the time. What about the remainder of the population?</p>
+        <p class="para editable block" id="baranoff-ch03_s03_s01_p09">We know that most of us do not behave as risk-averse people all the time. In the later 1990s, the stock market was considered to be a “bubble,” and many people invested in the stock market despite the preferences they exhibited before this time. At the time, Federal Reserve Board Chairman Alan Greenspan introduced the term “irrational exuberance” in a speech given at the American Enterprise Institute. The phrase has become a regular way to describe people’s deviations from normal preferences. Such behavior was also repeated in the early to mid-2000s with a real estate bubble. People without the rational means to buy homes bought them and took “nonconventional risks,” which led to the 2008–2009 financial and credit crisis and major recessions (perhaps even depression) as President Obama took office in January 2009. We can regard external market conditions and the “herd mentality” to be significant contributors to changing rational risk aversion traits.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p10">An individual may go skydiving, hang gliding, and participate in high-risk-taking behavior. Our question is, can the expected utility theory capture that behavior as well? Indeed it can, and that brings us to risk-seeking behavior and its characterization in E(U) theory. Since risk-seeking behavior exhibits preferences that seem to be the opposite of risk aversion, the mathematical functional representation may likewise show opposite behavior. For a risk-loving person, the utility function will show the shape given in <a class="xref" href="#baranoff-ch03_s03_s01_f02">Figure 3.3 "A Utility Function for a Risk-Seeking Individual"</a>. It shows that the greater the level of wealth of the individual, the higher is the increase in utility when an additional dollar is given to the person. We call this feature of the function, in which utility is always increasing at an increasing rate, <span class="margin_term"><a class="glossterm">increasing marginal utility</a><span class="glossdef">Feature of a utility function in which utility is always increasing at an increasing rate.</span></span>. It turns out that all <span class="margin_term"><a class="glossterm">convex utility functions</a><span class="glossdef">Utility function in which the curve lies strictly below the chord joining any two points on the curve.</span></span> look like <a class="xref" href="#baranoff-ch03_s03_s01_f02">Figure 3.3 "A Utility Function for a Risk-Seeking Individual"</a>. The curve lies strictly below the chord joining any two points on the curve.<span class="footnote" id="fwk-baranoff-fn03_011">The <strong class="emphasis bold">convex curve</strong> in <a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a> has some examples that include the mathematical function <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m011" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo stretchy="false">(</mo>
+		   <mi>W</mi>
+		  <mo stretchy="false">)</mo></mrow><mo>=</mo><msup>
+		   <mi>W</mi>
+		   <mn>2</mn>
+		  </msup>
+		  <mo>,</mo><msup>
+		   <mi>e</mi>
+		   <mi>W</mi>
+		  </msup><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span></span> <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m012" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo stretchy="false">(</mo>
+		   <mi>W</mi>
+		  <mo stretchy="false">)</mo></mrow><mo>=</mo><msup>
+		   <mi>W</mi>
+		   <mn>2</mn>
+		  </msup>
+		  <mo>,</mo><msup>
+		   <mi>e</mi>
+		   <mi>W</mi>
+		  </msup>
+		 </mrow>
+		</math>
+</span>.</p>
+        <div class="figure large editable block" id="baranoff-ch03_s03_s01_f02">
+            <p class="title"><span class="title-prefix">Figure 3.3</span> A Utility Function for a Risk-Seeking Individual</p>
+            <img src="section_07/db95b817606c6b1526afa83dc2395962.jpg">
+        </div>
+        <p class="para block" id="baranoff-ch03_s03_s01_p11">A risk-seeking individual will always choose to play a gamble at its AFP. For example, let us assume that the individual’s preferences are given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m013" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo stretchy="false">(</mo>
+		   <mi>W</mi>
+		  <mo stretchy="false">)</mo></mrow><mo>=</mo><msup>
+		   <mtext>W</mtext>
+		   <mn>2</mn>
+		  </msup><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> As before, the individual owns $10, and has to decide whether or not to play a lottery based on a coin toss. The payoff if a head turns up is $10 and −$2 if it’s a tail. We have seen earlier (in <a class="xref" href="#baranoff-ch03_s03_t01">Table 3.1 "Utility Function with Initial Endowment of $10"</a>) that the AFP for playing this lottery is $4.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p12">The expected utility calculation is as follows. After bearing the cost of the lottery upfront, the wealth is $6. If heads turns up, the final wealth becomes $16 ($6 + $10). In case tails turns face-up, then the final wealth equals $4 ($6 − $2). People’s expected utility if they play the lottery is <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m014" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo stretchy="false">(</mo>
+		   <mi>W</mi>
+			<mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0.5</mn><mo>×</mo><msup>
+		   <mrow>
+		    <mn>16</mn>
+		   </mrow>
+		   <mn>2</mn>
+		  </msup>
+		  <mo>+</mo><mn>0.5</mn><mo>×</mo><msup>
+		   <mn>4</mn>
+		   <mn>2</mn>
+		  </msup>
+		  <mo>=</mo><mn>136</mn>
+		 </mrow>
+		</math>
+</span> utils.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p13">On the other hand, if an individual named Ray decides not to play the lottery, then the <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m015" display="inline">
+		 <mrow>
+		  <mi>E</mi><mrow><mo stretchy="false">(</mo>
+		   <mi>U</mi>
+		  <mo stretchy="false">)</mo></mrow><mo>=</mo><msup>
+		   <mrow>
+		    <mn>10</mn>
+		   </mrow>
+		   <mn>2</mn>
+		  </msup>
+		  <mo>=</mo><mn>100</mn><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Since the E(U) is higher if Ray plays the lottery at its AFP, he will play the lottery. As a matter of fact, this is the mind-set of gamblers. This is why we see so many people at the slot machines in gambling houses.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p14">The contrast between the choices made by risk-averse individuals and risk-seeking individuals is starkly clear in the above example.<span class="footnote" id="fwk-baranoff-fn03_012">Mathematically speaking, for a risk-averse person, we have <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m016" display="inline">
+		 <mrow>
+		  <mi>E</mi><mrow><mo>(</mo>
+		   <mrow>
+		    <mi>U</mi><mrow><mo stretchy="false">[</mo>
+		     <mi>W</mi>
+		    <mo stretchy="false">]</mo></mrow>
+		   </mrow>
+		<mo>)</mo></mrow><mo>≤</mo><mi>U</mi><mo stretchy="false">[</mo><mi>E</mi><mrow><mo>(</mo>
+		   <mi>W</mi>
+		  <mo>)</mo></mrow><mo stretchy="false">]</mo><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> Similarly, for a risk-seeking person we have <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m017" display="inline">
+		 <mrow>
+		  <mi>E</mi><mo stretchy="false">(</mo><mi>U</mi><mrow><mo>[</mo>
+		   <mi>W</mi>
+		  <mo>)</mo></mrow><mo stretchy="false">]</mo><mo>≥</mo><mi>U</mi><mo stretchy="false">[</mo><mi>E</mi><mrow><mo>(</mo>
+		   <mi>W</mi>
+		  <mo>)</mo></mrow><mo stretchy="false">]</mo><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span> This result is called Jensen’s inequality.</span> To summarize, a risk-seeking individual always plays the lottery at its AFP, while a risk-averse person always forgoes it. Their concave (<a class="xref" href="baranoff-ch03_s00#baranoff-ch03_s00_f01">Figure 3.1 "Links between the Holistic Risk Picture and Risk Attitudes"</a>) versus convex (<a class="xref" href="#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a>) utility functions and their implications lie at the heart of their decision making.</p>
+        <p class="para block" id="baranoff-ch03_s03_s01_p15">Finally, we come to the third risk attitude type wherein an individual is indifferent between playing a lottery and not playing it. Such an individual is called risk neutral. The preferences of such an individual can be captured in E(U) theory by a linear utility function of the form <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m018" display="inline">
+		 <mrow>
+		  <mi>u</mi><mrow><mo>(</mo>
+		   <mtext>W</mtext>
+		  <mo>)</mo></mrow><mo>=</mo><mtext>aW</mtext><mtext>,</mtext>
+		 </mrow>
+		</math>
+</span> where a is a real number &gt; 0. Such an individual gains a constant marginal utility of wealth, that is, each additional dollar adds the same utility to the person regardless of whether the individual is endowed with $10 or $10,000. The utility function of such an individual is depicted in <a class="xref" href="#baranoff-ch03_s03_s01_f03">Figure 3.4 "A Utility Function for a Risk-Neutral Individual"</a>.</p>
+        <div class="figure large editable block" id="baranoff-ch03_s03_s01_f03">
+            <p class="title"><span class="title-prefix">Figure 3.4</span> A Utility Function for a Risk-Neutral Individual</p>
+            <img src="section_07/203abecaf1a75924f2a107763c0a7f48.jpg">
+        </div>
+        <div class="key_takeaways editable block" id="baranoff-ch03_s03_s01_n01">
+            <h3 class="title">Key Takeaways</h3>
+            <ul class="itemizedlist" id="baranoff-ch03_s03_s01_l02">
+                <li> This section lays the foundation for analysis of individuals’ behavior under uncertainty. Student should be able to describe it as such.</li>
+                <li> The student should be able to compute expected gains and expected utilities.</li>
+                <li> Finally, and most importantly, the concavity and convexity of the utility function is key to distinguishing between risk-averse and risk-seeking individuals.</li>
+            </ul>
+        </div>
+        <div class="exercises block" id="baranoff-ch03_s03_s01_n02">
+            <h3 class="title">Discussion Questions</h3>
+            <ol class="orderedlist" id="baranoff-ch03_s03_s01_l03">
+                <li>Discuss the von Neumann-Morgenstern expected utility function and discuss how it differs from expected gains.</li>
+                <li>You are told that <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m019" display="inline">
+				 <mrow>
+				  <mi>U</mi><mrow><mo>(</mo>
+				   <mi>W</mi>
+				  <mo>)</mo></mrow><mo>=</mo><msup>
+				   <mi>W</mi>
+				   <mn>2</mn>
+				  </msup>
+				 </mrow>
+				</math>
+</span> is a utility function with diminishing marginal utility. Is it correct? Discuss, using definition of diminishing marginal utility.</li>
+                <li>An individual has a utility function given by <span class="inlineequation"><math xml:id="baranoff_ch03_s03_m020" display="inline">
+				 <mrow>
+				  <mrow><mo>(</mo>
+				   <mi>W</mi>
+				  <mo>)</mo></mrow><mo>=</mo><msqrt>
+				   <mi>W</mi>
+				  </msqrt><mtext>,</mtext>
+				 </mrow>
+				</math>
+</span> and initial wealth of $100. If he plays a costless lottery in which he can win or lose $10 at the flip of a coin, compute his expected utility. What is the expected gain? Will such a person be categorized as risk neutral?</li>
+                <li>Discuss the three risk types with respect to their shapes, technical/mathematical formulation, and the economic interpretation.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-02-uncertainty-expected-value-and.html"><img src="shared/images/batch-left.png"></a> <a href="s07-02-uncertainty-expected-value-and.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-04-biases-affecting-choice-under-.html">Next Section</a> <a href="s07-04-biases-affecting-choice-under-.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+  
+  
+</body>
+</html>

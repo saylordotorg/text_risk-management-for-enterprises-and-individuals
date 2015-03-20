@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Risk Aversion and Price of Hedging Risk</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-04-biases-affecting-choice-under-.html"><img src="shared/images/batch-left.png"></a> <a href="s07-04-biases-affecting-choice-under-.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-06-information-asymmetry-problem-.html">Next Section</a> <a href="s07-06-information-asymmetry-problem-.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="baranoff-ch03_s05" condition="start-of-chunk" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">3.5</span> Risk Aversion and Price of Hedging Risk</h2>
+    <div class="learning_objectives editable block" id="baranoff-ch03_s05_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ul class="itemizedlist" id="baranoff-ch03_s05_l01">
+            <li> In this section we focus on risk aversion and the price of hedging risk. We discuss the actuarially fair premium (AFP) and the risk premium.</li>
+            <li> Students will learn how these principles are applied to pricing of insurance (one mechanism to hedge individual risks) and the decision to purchase insurance.</li>
+        </ul>
+    </div>
+    <p class="para editable block" id="baranoff-ch03_s05_p01">From now on, we will restrict ourselves to the E(U) theory since we can predict behavior with it. We are interested in the predictions about human behavior, rather than just a description of it.</p>
+    <p class="para editable block" id="baranoff-ch03_s05_p02">The risk averter’s utility function (as we had seen earlier in <a class="xref" href="baranoff-ch03_s03#baranoff-ch03_s03_s01_f01">Figure 3.2 "A Utility Function for a Risk-Averse Individual"</a>) is concave to the origin. Such a person will never play a lottery at its actuarially fair premium, that is, the expected loss in wealth to the individual. Conversely, such a person will always pay at least an actuarially fair premium to get rid of the entire risk.</p>
+    <p class="para block" id="baranoff-ch03_s05_p03">Suppose Ty is a student who gets a monthly allowance of $200 (initial wealth <em class="emphasis">W<sub class="subscript">0</sub></em>) from his parents. He might lose $100 on any given day with a probability 0.5 or not lose any amount with 50 percent chance. Consequently, the expected loss (E[L]) to Ty equals 0.5($0) + 0.5($100) = $50. In other words, Ty’s expected final wealth E (FW) = 0.5($200 − $0) + 0.5($200 − $100) = <em class="emphasis">W<sub class="subscript">0</sub></em> − E(L) = $150. The question is how much Ty would be willing to pay to hedge his expected loss of $50. We will assume that Ty’s utility function is given by <span class="inlineequation"><math xml:id="baranoff_ch03_s05_m001" display="inline">
+	 <mrow>
+	  <mi>U</mi><mrow><mo>(</mo>
+	   <mi>W</mi>
+	  <mo>)</mo></mrow><mo>=</mo><msqrt>
+	   <mi>W</mi>
+	  </msqrt>
+	 </mrow>
+	</math>
+</span>—a risk averter’s utility function.</p>
+    <p class="para editable block" id="baranoff-ch03_s05_p04">To apply the expected utility theory to answer the question above, we solve the problem in stages. In the first step, we find out Ty’s expected utility when he does not purchase insurance and show it on <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (a). In the second step, we figure out if he will buy insurance at actuarially fair prices and use <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (b) to show it. Finally, we compute Ty’s utility when he pays a premium P to get rid of the risk of a loss. P represents the maximum premium Ty is willing to pay. This is featured in <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (c). At this premium, Ty is exactly indifferent between buying insurance or remaining uninsured. What is P?</p>
+    <div class="figure large editable block" id="baranoff-ch03_s05_f01">
+        <p class="title"><span class="title-prefix">Figure 3.6</span> Risk Aversion</p>
+        <img src="section_07/9416e971121af9a0e0188c67ec5b1bfc.jpg">
+    </div>
+    <ul class="itemizedlist block" id="baranoff-ch03_s05_l02">
+        <li>
+            <p class="para">Step 1: Expected utility, no insurance.</p>
+            <p class="para" id="baranoff-ch03_s05_p05">In case Ty does not buy insurance, he retains all the uncertainty. Thus, he will have an expected final wealth of $150 as calculated above. What is his expected utility?</p>
+            <p class="para" id="baranoff-ch03_s05_p06">The expected utility is calculated as a weighted sum of the utilities in the two states, loss and no loss. Therefore, <span class="inlineequation"><math xml:id="baranoff_ch03_s05_m002" display="inline">
+	 <mrow>
+	  <mtext>EU </mtext><mo>=</mo><mtext> </mtext><mn>0.</mn><mtext>5</mtext><msqrt>
+	   <mrow>
+	    <mo stretchy="false">(</mo><mi>$</mi><mn>200</mn><mo>−</mo><mi>$</mi><mn>0</mn><mo stretchy="false">)</mo>
+	   </mrow>
+	  </msqrt>
+	  <mo>+</mo><mn>0.</mn><mtext>5</mtext><msqrt>
+	   <mrow>
+	    <mo stretchy="false">(</mo><mi>$</mi><mn>200</mn><mo>−</mo><mi>$</mi><mn>100</mn><mo stretchy="false">)</mo>
+	   </mrow>
+	  </msqrt>
+	  <mo>=</mo><mtext> 12</mtext><mn>.0</mn><mtext>71</mtext><mtext>.</mtext>
+	 </mrow>
+	</math>
+</span> <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (a) shows the point of E(U) for Ty when he does not buy insurance. His expected wealth is given by $150 on the x-axis and expected utility by 12.071 on the y-axis. When we plot this point on the chart, it lies at D, on the chord joining the two points A and B. A and B on the utility curve correspond to the utility levels when a loss is possible (W<sub class="subscript">1</sub> = 100) and no loss (W<sub class="subscript">0</sub> = 200), respectively. In case Ty does not hedge, then his expected utility equals 12.071.</p>
+            <p class="para" id="baranoff-ch03_s05_p07">What is the actuarially fair premium for Ty? Note actuarially fair premium (AFP) equals the expected loss = $50. Thus the AFP is the distance between W<sub class="subscript">0</sub> and the E (FW) in <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (a).</p>
+        </li>
+        <li>
+            <p class="para">Step 2: Utility with insurance at AFP.</p>
+            <p class="para" id="baranoff-ch03_s05_p08">Now, suppose an insurance company offers insurance to Ty at a $50 premium (AFP). Will Ty buy it? Note that when Ty buys insurance at AFP, and he does not have a loss, his final wealth is $150 (Initial Wealth [$200] − AFP [$50]). In case he does suffer a loss, his final wealth = Initial Wealth ($200) − AFP ($50) − Loss ($100) + Indemnity ($100) = $150. Thus, after the purchase of insurance at AFP, Ty’s final wealth stays at $150 regardless of a loss. That is why Ty has purchased a certain wealth of $150, by paying an AFP of $50. His utility is now given by <span class="inlineequation"><math xml:id="baranoff_ch03_s05_m003" display="inline">
+	 <mrow>
+	  <msqrt>
+	   <mrow>
+	    <mn>150</mn>
+	   </mrow>
+	  </msqrt>
+	  <mo>=</mo><mn>12.247</mn>
+	 </mrow>
+	</math>
+</span>. This point is represented by C in <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (b). Since C lies strictly above D, Ty will always purchase full insurance at AFP. The noteworthy feature for risk-averse individuals can now be succinctly stated. A risk-averse person will always hedge the risk completely at a cost that equals the expected loss. This cost is the actuarially fair premium (AFP). Alternatively, we can say that a risk-averse person always prefers certainty to uncertainty if uncertainty can be hedged away at its actuarially fair price.</p>
+            <p class="para" id="baranoff-ch03_s05_p09">However, the most interesting part is that a risk-averse individual like Ty will pay more than the AFP to get rid of the risk.</p>
+        </li>
+        <li>
+            <p class="para">Step 3: Utility with insurance at a price greater than AFP.</p>
+            <p class="para" id="baranoff-ch03_s05_p10">In case the actual premium equals AFP (or expected loss for Ty), it implies the insurance company does not have its own costs/profits. This is an unrealistic scenario. In practice, the premiums must be higher than AFP. The question is how much higher can they be for Ty to still be interested?</p>
+            <p class="para" id="baranoff-ch03_s05_p11">To answer this question, we need to answer the question, what is the maximum premium Ty would be willing to pay? The maximum premium P is determined by the point of indifference between no insurance and insurance at price P.</p>
+            <p class="para" id="baranoff-ch03_s05_p12">If Ty bears a cost of P, his wealth stands at $200 − P. And this wealth is certain for the same reasons as in step 2. If Ty does not incur a loss, his wealth remains $200 − P. In case he does incur a loss then he gets indemnified by the insurance company. Thus, regardless of outcome his certain wealth is $200 − P.</p>
+            <p class="para" id="baranoff-ch03_s05_p13">To compute the point of indifference, we should equate the utility when Ty purchases insurance at P to the expected utility in the no-insurance case. Note E(U) in the no-insurance case in step 1 equals 12.071. After buying insurance at P, Ty’s certain utility is <span class="inlineequation"><math xml:id="baranoff_ch03_s05_m004" display="inline">
+	 <mrow>
+	  <msqrt>
+	   <mrow>
+	    <mn>200</mn><mo>−</mo><mtext>P</mtext>
+	   </mrow>
+	  </msqrt><mtext>.</mtext>
+	 </mrow>
+	</math>
+</span> So we solve the equation <span class="inlineequation"><math xml:id="baranoff_ch03_s05_m005" display="inline">
+	 <mrow>
+	  <msqrt>
+	   <mrow>
+	    <mn>200</mn><mo>−</mo><mtext>P</mtext>
+	   </mrow>
+	  </msqrt>
+	  <mo>=</mo><mn>12.071</mn>
+	 </mrow>
+	</math>
+</span> and get P = $54.29.</p>
+            <p class="para" id="baranoff-ch03_s05_p14">Let us see the above calculation on a graph, <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> (c). Ty tells himself, “As long as the premium P is such that I am above the E(U) line when I do not purchase insurance, I would be willing to pay it.” So starting from the initial wealth W<sub class="subscript">0</sub>, we deduct P, up to the point that the utility of final wealth equals the expected utility given by the point E(U) on the y-axis. This point is given by W<sub class="subscript">2</sub> = W<sub class="subscript">0</sub> − P.</p>
+            <p class="para" id="baranoff-ch03_s05_p15">The <span class="margin_term"><a class="glossterm">Total Premium</a><span class="glossdef">The sum of the actuarially fair premium and the risk premium.</span></span> (TP) = P comprises two parts. The AFP = the distance between initial wealth W<sub class="subscript">0</sub> and E (FW) (= E [L]), and the distance between E (FW) and W<sub class="subscript">2</sub>. This distance is called the risk premium (RP, shown as the length ED in <a class="xref" href="#baranoff-ch03_s05_f01">Figure 3.6 "Risk Aversion"</a> [c]) and in Ty’s case above, it equals $54.29 − $50 = $4.29.</p>
+            <p class="para" id="baranoff-ch03_s05_p16">The premium over and above the AFP that a risk-averse person is willing to pay to get rid of the risk is called the <span class="margin_term"><a class="glossterm">risk premium</a><span class="glossdef">The premium over and above the actuarially fair premium that a risk-averse person is willing to pay to get rid of risk.</span></span>. Insurance companies are aware of this behavior of risk-averse individuals. However, in the example above, any insurance company that charges a premium greater than $54.29 will not be able to sell insurance to Ty.</p>
+            <p class="para" id="baranoff-ch03_s05_p17">Thus, we see that individuals’ risk aversion is a key component in insurance pricing. The greater the degree of risk aversion, the higher the risk premium an individual will be willing to pay. But the insurance price has to be such that the premium charged turns out to be less than or equal to the maximum premium the person is willing to pay. Otherwise, the individual will never buy full insurance.</p>
+            <p class="para" id="baranoff-ch03_s05_p18">Thus, risk aversion is a necessary condition for transfer of risks. Since insurance is one mechanism through which a risk-averse person transfers risk, risk aversion is of paramount importance to insurance demand.</p>
+            <p class="para" id="baranoff-ch03_s05_p19">The degree of risk aversion is only one aspect that affects insurance prices. Insurance prices also reflect other important components. To study them, we now turn to the role that information plays in the markets: in particular, how information and information asymmetries affect the insurance market.</p>
+        </li>
+    </ul>
+    <div class="key_takeaways editable block" id="baranoff-ch03_s05_n02">
+        <h3 class="title">Key Takeaways</h3>
+        <ul class="itemizedlist" id="baranoff-ch03_s05_l03">
+            <li> In this section, students learned that risk aversion is the key to understanding why insurance and other risk hedges exist.</li>
+            <li> The student should be able to express the demand for hedging and the conditions under which a risk-averse individual might refuse to transfer risk.</li>
+        </ul>
+    </div>
+    <div class="exercises editable block" id="baranoff-ch03_s05_n03">
+        <h3 class="title">Discussion Questions</h3>
+        <ol class="orderedlist" id="baranoff-ch03_s05_l04">
+            <li>What shape does a risk-averse person’s utility curve take? What role does risk aversion play in market demand for insurance products?</li>
+            <li>Distinguish between risk premium and AFP. Show the two on a graph.</li>
+            <li>Under what conditions will a risk-averse person refuse an insurance offer?</li>
+        </ol>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-04-biases-affecting-choice-under-.html"><img src="shared/images/batch-left.png"></a> <a href="s07-04-biases-affecting-choice-under-.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-06-information-asymmetry-problem-.html">Next Section</a> <a href="s07-06-information-asymmetry-problem-.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+  
+  
+</body>
+</html>

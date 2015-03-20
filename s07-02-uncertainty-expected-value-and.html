@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Uncertainty, Expected Value, and Fair Games</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-01-utility-theory.html"><img src="shared/images/batch-left.png"></a> <a href="s07-01-utility-theory.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-03-choice-under-uncertainty-expec.html">Next Section</a> <a href="s07-03-choice-under-uncertainty-expec.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="baranoff-ch03_s02" condition="start-of-chunk" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">3.2</span> Uncertainty, Expected Value, and Fair Games</h2>
+    <div class="learning_objectives editable block" id="baranoff-ch03_s02_n01">
+        <h3 class="title">Learning Objectives</h3>
+        <ul class="itemizedlist" id="baranoff-ch03_s02_l01">
+            <li> In this section we discuss the notion of uncertainty. Mathematical preliminaries discussed in this section form the basis for analysis of individual decision making in uncertain situations.</li>
+            <li> The student should pick up the tools of this section, as we will apply them later.</li>
+        </ul>
+    </div>
+    <p class="para editable block" id="baranoff-ch03_s02_p01">As we learned in the chapters <a class="xref" href="baranoff-ch01#baranoff-ch01">Chapter 1 "The Nature of Risk: Losses and Opportunities"</a> and <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>, risk and uncertainty depend upon one another. The origins of the distinction go back to the Mr. Knight,<span class="footnote" id="fwk-baranoff-fn03_007">See Jochen Runde, “Clarifying Frank Knight’s Discussion of the Meaning of Risk and Uncertainty,” <em class="emphasis">Cambridge Journal of Economics</em> 22, no. 5 (1998): 539–46.</span> who distinguished between risk and uncertainty, arguing that measurable uncertainty is risk. In this section, since we focus only on measurable uncertainty, we will not distinguish between risk and uncertainty and use the two terms interchangeably.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p02">As we described in <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>, the study of uncertainty originated in games of chance. So when we play games of dice, we are dealing with outcomes that are inherently uncertain. The branch of science of uncertain outcomes is probability and statistics. Notice that the analysis of probability and statistics applies only if outcomes are uncertain. When a student registers for a class but does not attend any lectures nor does any assigned work or test, only one outcome is possible: a failing grade. On the other hand, if the student attends all classes and scores 100 percent on all tests and assignments, then too only one outcome is possible, an “A” grade. In these extreme situations, no uncertainty arises with the outcomes. But between these two extremes lies the world of uncertainty. Students often do research on the instructor and try to get a “feel” for the chance that they will make a particular grade if they register for an instructor’s course.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p03">Even though we covered some of this discussion of probability and uncertainty in <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>, we repeat it here for reinforcement. Figuring out the chance, in mathematical terms, is the same as calculating the probability of an event. To compute a probability empirically, we repeat an experiment with uncertain outcomes (called a random experiment) and count the number of times the event of interest happens, say <em class="emphasis">n</em>, in the <em class="emphasis">N</em> trials of the experiment. The empirical probability of the event then equals <em class="emphasis">n</em>/<em class="emphasis">N</em>. So, if one keeps a log of the number of times a computer crashes in a day and records it for 365 days, the probability of the computer crashing on a day will be the sum of all of computer crashes on a daily basis (including zeroes for days it does not crash at all) divided by 365.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p04">For some problems, the probability can be calculated using mathematical deduction. In these cases, we can figure out the probability of getting a head on a coin toss, two aces when two cards are randomly chosen from a deck of 52 cards, and so on (see the example of the dice in <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>). We don’t have to conduct a random experiment to actually compute the mathematical probability, as is the case with empirical probability.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p05">Finally, as strongly suggested before, subjective probability is based on a person’s beliefs and experiences, as opposed to empirical or mathematical probability. It may also depend upon a person’s state of mind. Since beliefs may not always be rational, studying behavior using subjective probabilities belongs to the realm of behavioral economics rather than traditional rationality-based economics.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p06">So consider a lottery (a game of chance) wherein several outcomes are possible with defined probabilities. Typically, outcomes in a lottery consist of monetary prizes. Returning to our dice example of <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>, let’s say that when a six-faced die is rolled, the payoffs associated with the outcomes are $1 if a 1 turns up, $2 for a 2, …, and $6 for a 6. Now if this game is played once, one and only one amount can be won—$1, $2, and so on. However, if the same game is played many times, what is the amount that one can <em class="emphasis">expect</em> to win?</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p07">Mathematically, the answer to any such question is very straightforward and is given by the expected value of the game.</p>
+    <p class="para block" id="baranoff-ch03_s02_p08">In a game of chance, if <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m001" display="inline">
+		 <mrow>
+		  <msub>
+		   <mtext>W</mtext>
+		   <mn>1</mn>
+		  </msub>
+		  <mo>,</mo><msub>
+		   <mtext>W</mtext>
+		   <mn>2</mn>
+		  </msub>
+		  <mo>,</mo><mo>…</mo><mo>,</mo><msub>
+		   <mtext>W</mtext>
+		   <mtext>N</mtext>
+		  </msub>
+		 </mrow>
+		</math>
+</span> are the N outcomes possible with probabilities <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m002" display="inline">
+		 <mrow>
+		  <msub>
+		   <mi>π</mi>
+		   <mn>1</mn>
+		  </msub>
+		  <mo>,</mo><msub>
+		   <mi>π</mi>
+		   <mn>2</mn>
+		  </msub>
+		  <mo>,</mo><mo>…</mo><mo>,</mo><msub>
+		   <mi>π</mi>
+		   <mtext>N</mtext>
+		  </msub>
+		 </mrow>
+		</math>
+</span>, then the expected value of the game (G) is </p>
+    <span class="informalequation block"><math xml:id="baranoff_ch03_s02_m003" display="block">
+		 <mrow>
+		  <mtext>E(U)</mtext><mo>=</mo><mstyle displaystyle="true">
+		   <munderover>
+		    <mo mathsize="140%">∑</mo>
+		    <mrow>
+		     <mi>i</mi><mo>=</mo><mn>1</mn>
+		    </mrow>
+		    <mi>∞</mi>
+		   </munderover>
+		   <mrow>
+		    <munderover>
+		     <mstyle displaystyle="true"><mrow>
+		      <msub>
+		       <mi>π</mi>
+		       <mi>i</mi>
+		      </msub>
+		     </mrow></mstyle>
+		     <mrow></mrow>
+		     <mrow></mrow>
+		    </munderover>
+		   </mrow>
+		  </mstyle><mtext>U</mtext><mrow><mo>(</mo>
+		   <mrow>
+		    <msub>
+		     <mtext>W</mtext>
+		     <mi>i</mi>
+		    </msub>
+		   </mrow>
+		  <mo>)</mo></mrow><mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mi>ln</mi><mrow><mo>(</mo>
+		   <mn>2</mn>
+		  <mo>)</mo></mrow><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>4</mn>
+		  </mfrac>
+		  <mo>×</mo><mi>ln</mi><mrow><mo>(</mo>
+		   <mn>4</mn>
+		  <mo>)</mo></mrow><mo>+</mo><mo>…</mo><mo>=</mo><munderover>
+		   <mstyle displaystyle="true"><mrow>
+		    <mstyle displaystyle="true">
+		     <munderover>
+		      <mo mathsize="140%">∑</mo>
+		      <mrow>
+		       <mi>i</mi><mo>=</mo><mn>1</mn>
+		      </mrow>
+		      <mi>∞</mi>
+		     </munderover>
+		     <mrow>
+			<mstyle mathsize="60%">
+		      <mfrac>
+		       <mn>1</mn>
+		       <mrow>
+			<msup>
+			 <mn>2</mn>
+			 <mi>i</mi>
+			</msup>
+		       </mrow>
+		      </mfrac>
+			</mstyle>
+		     </mrow>
+		    </mstyle>
+		   </mrow></mstyle>
+		   <mrow></mrow>
+		   <mrow></mrow>
+		  </munderover>
+		  <mi>ln</mi><mrow><mo>(</mo>
+		   <mrow>
+		    <msup>
+		     <mn>2</mn>
+		     <mi>i</mi>
+		    </msup>
+		   </mrow>
+		  <mo>)</mo><mtext>.</mtext></mrow>
+		 </mrow>
+		</math>
+</span>
+    <p class="para editable block" id="baranoff-ch03_s02_p09">The computation can be extended to expected values of any uncertain situation, say losses, provided we know the outcome numbers and their associated probabilities. The probabilities sum to 1, that is, </p>
+    <span class="informalequation block"><math xml:id="baranoff_ch03_s02_m004" display="block">
+		 <mrow>
+		  <mstyle displaystyle="true">
+		   <munderover>
+		    <mo mathsize="140%">∑</mo>
+		    <mrow>
+		     <mi>i</mi><mo>=</mo><mn>1</mn>
+		    </mrow>
+		    <mi>N</mi>
+		   </munderover>
+		   <mrow>
+		    <msub>
+		     <mi>π</mi>
+		     <mi>i</mi>
+		    </msub>
+		   </mrow>
+		  </mstyle><mo>=</mo><msub>
+		   <mi>π</mi>
+		   <mn>1</mn>
+		  </msub>
+		  <mo>+</mo><mo>…</mo><mo>+</mo><msub>
+		   <mi>π</mi>
+		   <mi>N</mi>
+		  </msub>
+		  <mo>=</mo><mn>1</mn><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span>
+    <p class="para block" id="baranoff-ch03_s02_p10">While the computation of expected value is important, equally important is notion behind expected values. Note that we said that when it comes to the outcome of a single game, only one amount can be won, either $1, $2, …, $6. But if the game is played over and over again, then one can expect to win <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m005" display="inline">
+		 <mrow>
+		  <mtext>E</mtext><mrow><mo>(</mo>
+		   <mtext>G</mtext>
+		  <mo>)</mo></mrow><mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>6</mn>
+		  </mfrac>
+		  <mn>1</mn><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>6</mn>
+		  </mfrac>
+		  <mn>2</mn><mo>…</mo><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>6</mn>
+		  </mfrac>
+		  <mn>6</mn><mo>=</mo><mtext>$</mtext><mn>3.50</mn>
+		 </mrow>
+		</math>
+</span> per game. Often—like in this case—the expected value is not one of the possible outcomes of the distribution. In other words, the probability of getting $3.50 in the above lottery is zero. Therefore, the concept of expected value is a long-run concept, and the hidden assumption is that the lottery is played many times. Secondly, the <span class="margin_term"><a class="glossterm">expected value</a><span class="glossdef">The sum of the products of two numbers, the outcomes and their associated probabilities.</span></span> is a sum of the products of two numbers, the outcomes and their associated probabilities. If the probability of a large outcome is very high then the expected value will also be high, and vice versa.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p11">Expected value of the game is employed when one designs a <span class="margin_term"><a class="glossterm">fair game</a><span class="glossdef">Game in which the cost of playing equals the expected winnings of the game, so that net value of the game equals zero.</span></span>. A fair game, actuarially speaking, is one in which the cost of playing the game equals the expected winnings of the game, so that net value of the game equals zero. We would expect that people are willing to play all fair value games. But in practice, this is not the case. I will not pay $500 for a lucky outcome based on a coin toss, even if the expected gains equal $500. No game illustrates this point better than the St. Petersburg paradox.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p12">The paradox lies in a proposed game wherein a coin is tossed until “head” comes up. That is when the game ends. The payoff from the game is the following: if head appears on the first toss, then $2 is paid to the player, if it appears on the second toss then $4 is paid, if it appears on the third toss, then $8, and so on, so that if head appears on the <em class="emphasis">n<sup class="superscript">th</sup></em> toss then the payout is $2<sup class="superscript">n</sup>. The question is how much would an individual pay to play this game?</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p13">Let us try and apply the fair value principle to this game, so that the cost an individual is willing to bear should equal the fair value of the game. The expected value of the game <em class="emphasis">E(G)</em> is calculated below.</p>
+    <p class="para block" id="baranoff-ch03_s02_p14">The game can go on indefinitely, since the head may never come up in the first million or billion trials. However, let us look at the expected payoff from the game. If head appears on the first try, the probability of that happening is <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m006" display="inline">
+		 <mrow>
+		  <mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac><mtext>,</mtext>
+		 </mrow>
+		</math>
+</span> and the payout is $2. If it happens on the second try, it means the first toss yielded a tail (T) and the second a head (H). The probability of TH combination <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m007" display="inline">
+		 <mrow>
+		  <mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>4</mn>
+		  </mfrac><mtext>,</mtext>
+		 </mrow>
+		</math>
+</span> and the payoff is $4. Then if H turns up on the third attempt, it implies the sequence of outcomes is TTH, and the probability of that occurring is <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m008" display="inline">
+		 <mrow>
+		  <mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>8</mn>
+		  </mfrac>
+		 </mrow>
+		</math>
+</span> with a payoff of $8. We can continue with this inductive analysis ad infinitum. Since expected is the sum of all products of outcomes and their corresponding probabilities, <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m009" display="inline">
+		 <mrow>
+		  <mtext>E</mtext><mrow><mo>(</mo>
+		   <mtext>G</mtext>
+		  <mo>)</mo></mrow><mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mn>2</mn><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>4</mn>
+		  </mfrac>
+		  <mo>×</mo><mn>4</mn><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>8</mn>
+		  </mfrac>
+		  <mo>×</mo><mn>8</mn><mo>+</mo><mo>…</mo><mo>=</mo><mi>∞</mi><mtext>.</mtext>
+		 </mrow>
+		</math>
+</span></p>
+    <p class="para editable block" id="baranoff-ch03_s02_p15">It is evident that while the expected value of the game is infinite, not even the Bill Gateses and Warren Buffets of the world will give even a thousand dollars to play this game, let alone billions.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p16">Daniel Bernoulli was the first one to provide a solution to this paradox in the eighteenth century. His solution was that individuals do not look at the expected wealth when they bid a lottery price, but the expected utility of the lottery is the key. Thus, while the expected wealth from the lottery may be infinite, the expected utility it provides may be finite. Bernoulli termed this as the “moral value” of the game. Mathematically, Bernoulli’s idea can be expressed with a utility function, which provides a representation of the satisfaction level the lottery provides.</p>
+    <p class="para block" id="baranoff-ch03_s02_p17">Bernoulli used <span class="inlineequation"><math xml:id="baranoff_ch03_s02_m010" display="inline">
+		 <mrow>
+		  <mi>U</mi><mrow><mo>(</mo>
+		   <mi>W</mi>
+		  <mo>)</mo></mrow><mo>=</mo><mi>ln</mi><mo stretchy="false">(</mo><mi>W</mi><mo stretchy="false">)</mo>
+		 </mrow>
+		</math>
+</span> to represent the utility that this lottery provides to an individual where <em class="emphasis">W</em> is the payoff associated with each event H, TH, TTH, and so on, then the expected utility from the game is given by </p>
+    <span class="informalequation block"><math xml:id="baranoff_ch03_s02_m011" display="block">
+		 <mrow>
+		  <mtext>E(U)</mtext><mo>=</mo><mstyle displaystyle="true">
+		   <munderover>
+		    <mo mathsize="140%">∑</mo>
+		    <mrow>
+		     <mi>i</mi><mo>=</mo><mn>1</mn>
+		    </mrow>
+		    <mi>∞</mi>
+		   </munderover>
+		   <mrow>
+		    <munderover>
+		     <mstyle displaystyle="true"><mrow>
+		      <msub>
+		       <mi>π</mi>
+		       <mi>i</mi>
+		      </msub>
+		     </mrow></mstyle>
+		     <mrow></mrow>
+		     <mrow></mrow>
+		    </munderover>
+		   </mrow>
+		  </mstyle><mtext>U</mtext><mrow><mo>(</mo>
+		   <mrow>
+		    <msub>
+		     <mtext>W</mtext>
+		     <mi>i</mi>
+		    </msub>
+		   </mrow>
+		  <mo>)</mo></mrow><mo>=</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>2</mn>
+		  </mfrac>
+		  <mo>×</mo><mi>ln</mi><mrow><mo>(</mo>
+		   <mn>2</mn>
+		  <mo>)</mo></mrow><mo>+</mo><mfrac>
+		   <mn>1</mn>
+		   <mn>4</mn>
+		  </mfrac>
+		  <mo>×</mo><mi>ln</mi><mrow><mo>(</mo>
+		   <mn>4</mn>
+		  <mo>)</mo></mrow><mo>+</mo><mo>…</mo><mo>=</mo><munderover>
+		   <mstyle displaystyle="true"><mrow>
+		    <mstyle displaystyle="true">
+		     <munderover>
+		      <mo mathsize="140%">∑</mo>
+		      <mrow>
+		       <mi>i</mi><mo>=</mo><mn>1</mn>
+		      </mrow>
+		      <mi>∞</mi>
+		     </munderover>
+		     <mrow>
+		     <mstyle mathsize="60%">
+		      <mfrac>
+		       <mn>1</mn>
+		       <mrow>
+			<msup>
+			 <mn>2</mn>
+			 <mi>i</mi>
+			</msup>
+		       </mrow>
+		      </mfrac>
+		      </mstyle>
+		     </mrow>
+		     </mstyle>
+		   </mrow></mstyle>
+		   <mrow></mrow>
+		   <mrow></mrow>
+		  </munderover>
+		  <mi>ln</mi><mrow><mo>(</mo>
+		   <mrow>
+		    <msup>
+		     <mn>2</mn>
+		     <mi>i</mi>
+		    </msup>,
+		   </mrow>
+		  <mo>)</mo></mrow>
+		 </mrow>
+		</math>
+</span>
+    <p class="para editable block" id="baranoff-ch03_s02_p18">which can be shown to equal 1.39 after some algebraic manipulation. Since the expected utility that this lottery provides is finite (even if the expected wealth is infinite), individuals will be willing to pay only a finite cost for playing this lottery.</p>
+    <p class="para editable block" id="baranoff-ch03_s02_p19">The next logical question to ask is, What if the utility was not given as natural log of wealth by Bernoulli but something else? What is that about the natural log function that leads to a finite expected utility? This brings us to the issue of expected utility and its central place in decision making under uncertainty in economics.</p>
+    <div class="key_takeaways editable block" id="baranoff-ch03_s02_n02">
+        <h3 class="title">Key Takeaways</h3>
+        <ul class="itemizedlist" id="baranoff-ch03_s02_l02">
+            <li> Students should be able to explain probability as a measure of uncertainty in their own words.</li>
+            <li> Moreover, the student should also be able to explain that any expected value is the sum of product of probabilities and outcomes and be able to compute expected values.</li>
+        </ul>
+    </div>
+    <div class="exercises editable block" id="baranoff-ch03_s02_n03">
+        <h3 class="title">Discussion Questions</h3>
+        <ol class="orderedlist" id="baranoff-ch03_s02_l03">
+            <li>Define probability. In how many ways can one come up with a probability estimate of an event? Describe.</li>
+            <li>Explain the need for utility functions using St. Petersburg paradox as an example.</li>
+            <li>Suppose a six-faced fair die with numbers 1–6 is rolled. What is the number you <em class="emphasis">expect</em> to obtain?</li>
+            <li>What is an actuarially fair game?</li>
+        </ol>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s07-01-utility-theory.html"><img src="shared/images/batch-left.png"></a> <a href="s07-01-utility-theory.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s07-03-choice-under-uncertainty-expec.html">Next Section</a> <a href="s07-03-choice-under-uncertainty-expec.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="shared/bookhub.css" rel="stylesheet" type="text/css">
+  <title>Appendix: Forecasting</title>
+</head>
+<body>
+
+  
+  <div id=navbar-top class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s08-05-comparisons-to-current-risk-ha.html"><img src="shared/images/batch-left.png"></a> <a href="s08-05-comparisons-to-current-risk-ha.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s08-07-review-and-practice.html">Next Section</a> <a href="s08-07-review-and-practice.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  <div id="book-content">
+    <div class="section" id="baranoff-ch04_s06" condition="start-of-chunk" version="5.0" lang="en">
+    <h2 class="title editable block">
+<span class="title-prefix">4.6</span> Appendix: Forecasting</h2>
+    <div class="section" id="baranoff-ch04_s06_s01">
+        <h2 class="title editable block">Forecasting of Frequency and Severity</h2>
+        <p class="para editable block" id="baranoff-ch04_s06_s01_p01">When insurers or risk managers use frequency and severity to project the future, they use trending techniques that apply to the loss distributions known to them.<span class="footnote" id="fwk-baranoff-fn04_012">Forecasting is part of the Associate Risk Manager designation under the Risk Assessment course using the book: Baranoff Etti, Scott Harrington, and Greg Niehaus, <em class="emphasis">Risk Assessment</em> (Malvern, PA: American Institute for Chartered Property Casualty Underwriters/Insurance Institute of America, 2005).</span> Regressions are the most commonly used tools to predict future losses and claims based on the past. In this textbook, we introduce linear regression using the data featured in <a class="xref" href="baranoff-ch02#baranoff-ch02">Chapter 2 "Risk Measurement and Metrics"</a>. The scientific notations for the regressions are discussed later in this appendix.</p>
+        <div class="table block" id="baranoff-ch04_s06_s01_t01" frame="all">
+            <p class="title"><span class="title-prefix">Table 4.5</span> Linear Regression Trend of Claims and Losses of A</p>
+            <table cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th align="right">Actual Fire Claims</th>
+                        <th align="right">Linear Trend For Claims</th>
+                        <th align="right">Actual Fire Losses</th>
+                        <th align="right">Linear Trend For Losses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td align="right">11</td>
+                        <td align="right">8.80</td>
+                        <td align="right">$16,500</td>
+                        <td align="right">$10,900.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td align="right">9</td>
+                        <td align="right">9.50</td>
+                        <td align="right">$40,000</td>
+                        <td align="right">$36,900.00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td align="right">7</td>
+                        <td align="right">10.20</td>
+                        <td align="right">$30,000</td>
+                        <td align="right">$62,900.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td align="right">10</td>
+                        <td align="right">10.90</td>
+                        <td align="right">$123,000</td>
+                        <td align="right">$88,900.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td align="right">14</td>
+                        <td align="right">11.60</td>
+                        <td align="right">$105,000</td>
+                        <td align="right">$114,900.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="figure large editable block" id="baranoff-ch04_s06_s01_f01">
+            <p class="title"><span class="title-prefix">Figure 4.5</span> Linear Regression Trend of Claims of A</p>
+            <img src="section_08/1045ff98ce29fd1ac9ba10fff2f2db74.jpg">
+        </div>
+        <div class="figure large editable block" id="baranoff-ch04_s06_s01_f02">
+            <p class="title"><span class="title-prefix">Figure 4.6</span> Linear Regression Trend of Losses of A</p>
+            <img src="section_08/f1ef5ae3b1c2052ee722f9d07fff792b.jpg">
+        </div>
+    </div>
+    <div class="section" id="baranoff-ch04_s06_s02">
+        <h2 class="title editable block">Using Linear Regression</h2>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p01">Linear regression attempts to explain the relationship among observed values by applying a straight line fit to the data. The linear regression model postulates that</p>
+        <span class="informalequation block">
+		<math xml:id="baranoff_ch04_s06_m001" display="block">
+		 <mrow>
+		  <mi>Y</mi><mo>=</mo><mtext> </mtext><mi>b</mi><mo>+</mo><mi>m</mi><mi>X</mi><mo>+</mo><mi>e</mi>
+		 </mrow>
+		</math>
+</span>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p02">,where the “residual” <em class="emphasis">e</em> is a random variable with mean of zero. The coefficients <em class="emphasis">a</em> and <em class="emphasis">b</em> are determined by the condition that the sum of the square residuals is as small as possible. For our purposes, we do not discuss the error term. We use the frequency and severity data of A for 5 years. Here, we provide the scientific notation that is behind <a class="xref" href="#baranoff-ch04_s06_s01_f01">Figure 4.5 "Linear Regression Trend of Claims of A"</a> and <a class="xref" href="#baranoff-ch04_s06_s01_f02">Figure 4.6 "Linear Regression Trend of Losses of A"</a>.</p>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p03">In order to determine the intercept of the line on the y-axis and the slope, we use <em class="emphasis">m</em> (slope) and <em class="emphasis">b</em> (y-intercept) in the equation.</p>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p04">Given a set of data with <em class="emphasis">n</em> data points, <strong class="emphasis bold"><em class="emphasis">the slope (m) and the y-intercept (b)</em></strong> are determined using:</p>
+        <span class="informalequation block"><math xml:id="baranoff_ch04_s06_m002" display="block">
+		 <mrow>
+		  <mi>m</mi><mo>=</mo><mfrac>
+		   <mrow>
+		    <mi>n</mi><mi>Σ</mi><mo stretchy="false">(</mo><mi>x</mi><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>Σ</mi><mi>x</mi><mi>Σ</mi><mi>y</mi>
+		   </mrow>
+		   <mrow>
+		    <mi>n</mi><mi>Σ</mi><mo stretchy="false">(</mo><msup>
+		     <mi>x</mi>
+		     <mn>2</mn>
+		    </msup>
+		    <mo stretchy="false">)</mo><mo>−</mo><msup>
+		     <mrow>
+		      <mo stretchy="false">(</mo><mi>Σ</mi><mi>x</mi><mo stretchy="false">)</mo>
+		     </mrow>
+		     <mn>2</mn>
+		    </msup>
+		   </mrow>
+		  </mfrac>
+		 </mrow>
+		</math>
+</span>
+        <span class="informalequation block"><math xml:id="baranoff_ch04_s06_m003" display="block">
+		 <mrow>
+		  <mi>b</mi><mo>=</mo><mfrac>   <mrow>
+		    <mi>Σ</mi><mi>y</mi><mo>−</mo><mi>m</mi><mi>Σ</mi><mi>x</mi>
+		   </mrow>
+		   <mi>n</mi>
+		  </mfrac>  
+		 </mrow>
+		</math>
+</span>
+        <div class="figure large editable block" id="baranoff-ch04_s06_s02_f01">
+            <p class="title"><span class="title-prefix">Figure 4.7</span> Showing the Slope and Intercept</p>
+            <img src="section_08/fcb29e9b6a0376ab26c69270e46af928.jpg">
+            <div class="copyright">
+                <p class="para">The graph is provided by Chris D. Odom, with permission.</p>
+            </div>
+        </div>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p05">Most commonly, practitioners use various software applications to obtain the trends. The student is invited to experiment with Microsoft Excel spreadsheets. <a class="xref" href="#baranoff-ch04_s06_s02_t01">Table 4.6 "Method of Calculating the Trend Line for the Claims"</a> provides the formulas and calculations for the intercept and slope of the claims to construct the trend line.</p>
+        <div class="table block" id="baranoff-ch04_s06_s02_t01" frame="all">
+            <p class="title"><span class="title-prefix">Table 4.6</span> Method of Calculating the Trend Line for the Claims</p>
+            <table cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>(1)</th>
+                        <th>(2)</th>
+                        <th>(3) = (1) × (2)</th>
+                        <th>(4) = (1)2</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>Year</td>
+                        <td>Claims</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>X</td>
+                        <td>Y</td>
+                        <td>XY</td>
+                        <td>X2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>11</td>
+                        <td>11.00</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>2</td>
+                        <td>9</td>
+                        <td>18.00</td>
+                        <td>4</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>3</td>
+                        <td>7</td>
+                        <td>21.00</td>
+                        <td>9</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>4</td>
+                        <td>10</td>
+                        <td>40.00</td>
+                        <td>16</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>n=5</td>
+                        <td>14</td>
+                        <td>70.00</td>
+                        <td>25</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>15</td>
+                        <td>51</td>
+                        <td>160</td>
+                        <td>55</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+<em class="emphasis">M</em> = Slope = 0.7</td>
+                        <td colspan="3">=<span class="inlineequation"><math xml:id="baranoff_ch04_s06_m004" display="inline">
+		 <mrow>
+		  <mi>m</mi><mo>=</mo><mfrac>
+		   <mrow>
+		    <mi>n</mi><mi>Σ</mi><mo stretchy="false">(</mo><mi>x</mi><mi>y</mi><mo stretchy="false">)</mo><mo>−</mo><mi>Σ</mi><mi>x</mi><mi>Σ</mi><mi>y</mi>
+		   </mrow>
+		   <mrow>
+		    <mi>n</mi><mi>Σ</mi><mo stretchy="false">(</mo><msup>
+		     <mi>x</mi>
+		     <mn>2</mn>
+		    </msup>
+		    <mo stretchy="false">)</mo><mo>−</mo><msup>
+		     <mrow>
+		      <mo stretchy="false">(</mo><mi>Σ</mi><mi>x</mi><mo stretchy="false">)</mo>
+		     </mrow>
+		     <mn>2</mn>
+		    </msup>
+		   </mrow>
+		  </mfrac>  
+		 </mrow>
+		</math>
+</span>
+</td>
+                        <td colspan="2">
+<span class="inlineequation"><math xml:id="baranoff_ch04_s06_m005" display="inline">
+		 <mrow>
+		  <mo>=</mo><mfrac>
+		   <mrow>
+		    <mo stretchy="false">(</mo><mn>5</mn><mo>×</mo><mn>160</mn><mo stretchy="false">)</mo><mo>−</mo><mo stretchy="false">(</mo><mn>15</mn><mo>×</mo><mn>51</mn><mo stretchy="false">)</mo>
+		   </mrow>
+		   <mrow>
+		    <mo stretchy="false">(</mo><mn>5</mn><mo>×</mo><mn>55</mn><mo stretchy="false">)</mo><mo>−</mo><mo stretchy="false">(</mo><mn>15</mn><mo>×</mo><mn>15</mn><mo stretchy="false">)</mo>
+		   </mrow>
+		  </mfrac>
+		  </mrow>
+		</math>
+</span>
+		</td>
+                    </tr>
+                    <tr>
+                        <td>
+<em class="emphasis">b</em> = Intercept = 8.1</td>
+                        <td colspan="3"><span class="inlineequation"><math xml:id="baranoff_ch04_s06_m006" display="inline">
+		 <mrow>
+		  <mi>b</mi><mo>=</mo><mfrac>
+		   <mrow>
+		    <mi>Σ</mi><mi>y</mi><mo>−</mo><mi>m</mi><mi>Σ</mi><mi>x</mi>
+		   </mrow>
+		   <mi>n</mi>
+		  </mfrac>
+		   </mrow>
+		</math>
+</span></td>
+                        <td colspan="2">
+<math xml:id="baranoff_ch04_s06_m007" display="block">
+		 <mrow>
+		  <mo>=</mo><mfrac>
+		   <mrow>
+		    <mn>51</mn><mo>−</mo><mo stretchy="false">(</mo><mn>0.7</mn><mo>×</mo><mn>15</mn><mo stretchy="false">)</mo>
+		   </mrow>
+		   <mn>5</mn>
+		  </mfrac>
+		 </mrow>
+		</math>
+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p06">Future Forecasts using the Slopes and Intercepts for A:</p>
+        <ul class="itemizedlist editable block" id="baranoff-ch04_s06_s02_l01">
+            <li>Future claims = Intercept + Slope × (X)</li>
+            <li>In year 6, the forecast of the number of claims is projected to be: {8.1 + (0.7 × 6)} = 12.3 claims</li>
+        </ul>
+        <ul class="itemizedlist editable block" id="baranoff-ch04_s06_s02_l02">
+            <li>Future losses = Intercept + Slope × (X)</li>
+            <li>In year 6, the forecast of the losses in dollars is projected to be: {−15, 100 + (26,000 × 6)} = $140,900 in losses</li>
+        </ul>
+        <p class="para editable block" id="baranoff-ch04_s06_s02_p07">The in-depth statistical explanation of the linear regression model is beyond the scope of this course. Interested students are invited to explore statistical models in elementary statistics textbooks. This first exposure to the world of forecasting, however, is critical to a student seeking further study in the fields of insurance and risk management.</p>
+    </div>
+</div>
+
+  </div>
+  
+  <div id=navbar-bottom class="navbar">
+    <div class="navbar-part left">
+      
+        <a href="s08-05-comparisons-to-current-risk-ha.html"><img src="shared/images/batch-left.png"></a> <a href="s08-05-comparisons-to-current-risk-ha.html">Previous Section</a>
+      
+    </div>
+    <div class="navbar-part middle">
+      <a href="index.html"><img src="shared/images/batch-up.png"></a> <a href="index.html">Table of Contents</a>
+    </div>
+    <div class="navbar-part right">
+      
+        <a href="s08-07-review-and-practice.html">Next Section</a> <a href="s08-07-review-and-practice.html"><img src="shared/images/batch-right.png"></a>
+      
+    </div>
+  </div>
+
+  </div>
+  <script type="text/javascript" src="shared/book.js"></script>
+  
+  <script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=MML_HTMLorMML"></script>
+  
+  
+</body>
+</html>
